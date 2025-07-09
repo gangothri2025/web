@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gangothri Group - Your One-Stop Shop for All Services</title>
+    <meta name="description" content="Comprehensive services including GST/IT filing, ticket booking, banking, money transfer, FASTAG, PAN assistance, loan reports, and government certificates.">
+    <meta name="author" content="Gangothri Group">
+    
+    <meta property="og:title" content="Gangothri Group - Complete General Services">
+    <meta property="og:description" content="One-stop solution for GST, banking, travel bookings, money transfers, and government services">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1200">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #0f766e;
+            --accent: #f59e0b;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --light-gray: #e2e8f0;
+            --success: #10b981;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            background-color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            border: none;
+            gap: 8px;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background: rgba(37, 99, 235, 0.05);
+        }
+        
+        .btn-large {
+            padding: 14px 32px;
+            font-size: 18px;
+        }
+        
+        .btn-accent {
+            background: var(--accent);
+            color: white;
+        }
+        
+        .btn-accent:hover {
+            background: #e69008;
+            transform: translateY(-2px);
+        }
+        
+        .section {
+            padding: 100px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .section-title {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        
+        .section-description {
+            font-size: 1.2rem;
+            color: var(--gray);
+        }
+        
+        /* Header */
+        .header {
+            background: white;
+            box-shadow: var(--shadow);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 12px;
+        }
+        
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-main {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+        
+        .logo-sub {
+            font-size: 0.9rem;
+            color: var(--gray);
+            letter-spacing: 1px;
+        }
+        
+        .nav-desktop {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-link {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            position: relative;
+            padding: 5px 0;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+        
+        .nav-link:hover:after,
+        .nav-link.active:after {
+            width: 100%;
+        }
+        
+        .header-cta {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .icon {
+            width: 20px;
+            height: 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+            color: white;
+            padding: 180px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .hero-description {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+            color: rgba(255, 255, 255, 0.85);
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 60px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 40px;
+            max-width: 800px;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: white;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .hero-image {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 50%;
+            background: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1200') center center/cover no-repeat;
+            border-bottom-left-radius: 200px;
+            z-index: 1;
+        }
+        
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-content {
+            padding: 30px;
+        }
+        
+        .service-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .service-description {
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+        
+        .service-features {
+            list-style: none;
+            margin-top: 20px;
+        }
+        
+        .service-features li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        
+        .service-features li:before {
+            content: '✓';
+            color: var(--success);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        /* Features */
+        .features {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+        }
+        
+        .feature-icon svg {
+            width: 32px;
+            height: 32px;
+            color: white;
+        }
+        
+        .feature-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .feature-description {
+            color: var(--gray);
+        }
+        
+        /* How It Works */
+        .process {
+            background: white;
+        }
+        
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 50px;
+        }
+        
+        .process-steps:before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--light-gray);
+            z-index: 1;
+        }
+        
+        .step {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            width: 25%;
+        }
+        
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border: 3px solid var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        
+        .step-icon span {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .step-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        
+        .step-description {
+            color: var(--gray);
+            padding: 0 15px;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: linear-gradient(135deg, #0f766e 0%, #134e4a 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonials:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200') center center/cover no-repeat;
+            opacity: 0.1;
+        }
+        
+        .testimonials .section-title {
+            color: white;
+        }
+        
+        .testimonials .section-title:after {
+            background: var(--accent);
+        }
+        
+        .testimonials .section-description {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 40px;
+            margin: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        
+        .testimonial-content {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 25px;
+            line-height: 1.8;
+            position: relative;
+        }
+        
+        .testimonial-content:before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: -15px;
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.1);
+            font-family: Georgia, serif;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-size: cover;
+        }
+        
+        .author-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
+        
+        /* Contact */
+        .contact {
+            background: white;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        
+        .contact-form {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark);
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid var(--light-gray);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .contact-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .contact-icon svg {
+            width: 24px;
+            height: 24px;
+            color: white;
+        }
+        
+        .contact-details h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        .contact-details p {
+            color: var(--gray);
+            line-height: 1.7;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: white;
+            padding: 80px 0 0;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-description {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 25px;
+        }
+        
+        .footer-title {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .footer-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .social-link:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .social-link svg {
+            width: 18px;
+            height: 18px;
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding: 25px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-content {
+                max-width: 100%;
+                text-align: center;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .hero-stats {
+                justify-content: center;
+            }
+            
+            .hero-image {
+                display: none;
+            }
+            
+            .process-steps {
+                flex-direction: column;
+                gap: 50px;
+            }
+            
+            .process-steps:before {
+                height: 100%;
+                width: 3px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .step {
+                width: 100%;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .section {
+                padding: 70px 0;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .hero {
+                padding: 150px 0 80px;
+            }
+            
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .nav-desktop {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <a href="#" class="logo">
+                    <div class="logo-icon">
+                        <span>G</span>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-main">Gangothri Group</span>
+                        <span class="logo-sub">General Services</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-link">More</a>
+                        <div class="dropdown-content">
+                          <a href="daycaer.html">Daycare & Play</a>
+                          <a href="index.html">Real Estate</a>
+                          <a href="dry.html">Dry Fruits</a>
+                        </div>
+                      </div>
+                    
+                </nav>
+
+                <!-- Desktop CTA -->
+                <div class="header-cta">
+                    <button class="btn-outline">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        +91 9539041595
+                    </button>
+                    <button class="btn-primary">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-image"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Your Complete Solution for All Essential Services</h1>
+                <p class="hero-subtitle">One-stop shop for GST, banking, travel, certificates, and more</p>
+                <p class="hero-description">Gangothri Group provides comprehensive services to simplify your life. From financial services to government documentation, we handle everything with professionalism and efficiency.</p>
+                
+                <div class="hero-buttons">
+                    <button class="btn-primary btn-large">Explore Services</button>
+                    <button class="btn-outline btn-large">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        Contact Us
+                    </button>
+                </div>
+                
+              
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Comprehensive Services</h2>
+                <p class="section-description">We offer a complete range of services to meet all your personal and business needs</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200');"></div>
+                    <div class="service-content">
+                        <h3 class="service-title">GST & IT Filing</h3>
+                        <p class="service-description">Professional assistance with GST registration, returns filing, and income tax filing for individuals and businesses.</p>
+                        <ul class="service-features">
+                            <li>GST Registration & Returns</li>
+                            <li>Income Tax Filing</li>
+                            <li>Tax Planning & Advisory</li>
+                            <li>Compliance Management</li>
+                        </ul>
+                        <button class="btn-outline">Learn More</button>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-image" style="background-image: url('image/c1.jpg');"></div>
+                    <div class="service-content">
+                        <h3 class="service-title">Travel Bookings</h3>
+                        <p class="service-description">Book train, flight, and bus tickets with exclusive deals and discounts for all your travel needs.</p>
+                        <ul class="service-features">
+                            <li>Flight Ticket Booking</li>
+                            <li>Train & Bus Reservations</li>
+                            <li>Hotel Bookings</li>
+                            <li>Travel Insurance</li>
+                        </ul>
+                        <button class="btn-outline">Learn More</button>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200');"></div>
+                    <div class="service-content">
+                        <h3 class="service-title">Banking & Financial Services</h3>
+                        <p class="service-description">Complete banking solutions, money transfers, forex services, and financial planning.</p>
+                        <ul class="service-features">
+                            <li>Account Opening Assistance</li>
+                            <li>Domestic & International Money Transfer</li>
+                            <li>Forex Services</li>
+                            <li>Loan Assistance</li>
+                        </ul>
+                        <button class="btn-outline">Learn More</button>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?q=80&w=1200');"></div>
+                    <div class="service-content">
+                        <h3 class="service-title">Government Certificates</h3>
+                        <p class="service-description">Assistance with all government certificates and documentation requirements.</p>
+                        <ul class="service-features">
+                            <li>PAN Card Assistance</li>
+                            <li>Aadhaar Services</li>
+                            <li>FASTAG Registration</li>
+                            <li>All Government Certificates</li>
+                        </ul>
+                        <button class="btn-outline">Learn More</button>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1200');"></div>
+                    <div class="service-content">
+                        <h3 class="service-title">Loan Project Reports</h3>
+                        <p class="service-description">Professional preparation of project reports for business loans and funding.</p>
+                        <ul class="service-features">
+                            <li>Business Loan Reports</li>
+                            <li>Project Feasibility Studies</li>
+                            <li>Funding Assistance</li>
+                            <li>Financial Projections</li>
+                        </ul>
+                        <button class="btn-outline">Learn More</button>
+                    </div>
+                </div>
+                <!-- Service 7 - Business Correspondent -->
+<div class="service-card">
+    <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1601597111158-2fceff292cdc?q=80&w=1200');"></div>
+    <div class="service-content">
+        <h3 class="service-title">Business Correspondent Services</h3>
+        <p class="service-description">Authorized banking services including account operations, cash deposits/withdrawals, and digital banking support.</p>
+        <ul class="service-features">
+            <li><strong>Bank of Baroda Net Banking</strong> - Account opening & transactions</li>
+            <li><strong>Airtel Payment Bank</strong> - Mobile banking & cash services</li>
+            <li>Cash Deposit/Withdrawal</li>
+            <li>Mini Statement & Balance Inquiry</li>
+            <li>AEPS & UPI Services</li>
+            <li>Customer Onboarding</li>
+        </ul>
+        <button class="btn-outline">Learn More</button>
+    </div>
+</div>
+<!-- Service 7 - Gold Loan -->
+<div class="service-card">
+    <div class="service-image" style="background-image: url('./image/gl1.jpg');"></div>
+    <div class="service-content">
+        <h3 class="service-title">Gold Loan @9.5%</h3>
+        <p class="service-description">Get instant funds against your gold with lowest interest rates and flexible repayment options.</p>
+        <ul class="service-features">
+            <li>Lowest Interest Rate (9.5%)</li>
+            <li>Instant Approval & Disbursal</li>
+            <li>High Loan-to-Value Ratio</li>
+            <li>Safe Gold Storage Facility</li>
+            <li>Flexible Repayment Options</li>
+        </ul>
+        <button class="btn-outline">Apply Now</button>
+    </div>
+</div>
+
+                    <!-- Service 7 - Insurance -->
+<div class="service-card">
+    <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1200');"></div>
+    <div class="service-content">
+        <h3 class="service-title">Insurance Services</h3>
+        <p class="service-description">Comprehensive insurance solutions to protect what matters most to you and your business.</p>
+        <ul class="service-features">
+            <li>Life Insurance Plans</li>
+            <li>Health & Medical Insurance</li>
+            <li>Property & Home Insurance</li>
+            <li>Vehicle & Auto Insurance</li>
+            <li>Business Insurance</li>
+            <li>Travel Insurance</li>
+        </ul>
+        <button class="btn-outline">Get Protected</button>
+    </div>
+</div>
+        <!-- Service 7 - Tours & Travels -->
+<div class="service-card">
+    <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1503220317375-aaad61436b1b?q=80&w=1200');"></div>
+    <div class="service-content">
+        <h3 class="service-title">Tours & Travel Packages</h3>
+        <p class="service-description">Customized domestic and international tour packages with exclusive deals and hassle-free planning.</p>
+        <ul class="service-features">
+            <li>Domestic Tour Packages</li>
+            <li>International Holiday Packages</li>
+            <li>Pilgrimage Tours</li>
+            <li>Honeymoon Specials</li>
+            <li>Adventure Travel</li>
+        </ul>
+        <button class="btn-outline">Explore Packages</button>
+    </div>
+</div>
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=1200');"></div>
+                    <div class="service-content">
+                        <h3 class="service-title">Other Essential Services</h3>
+                        <p class="service-description">Comprehensive solutions for all your documentation and compliance needs.</p>
+                        <ul class="service-features">
+                            <li>Insurance Services</li>
+                            <li>Legal Documentation</li>
+                            <li>Business Registration</li>
+                            <li>Compliance Services</li>
+                        </ul>
+                        <button class="btn-outline">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-description">Explore our comprehensive range of premium services tailored for your luxury lifestyle</p>
+            </div>
+
+            <div class="services-grid">
+                <a href="daycaer.html" class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            <path d="M9.5 9h5M12 12v6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Daycare & Play</h3>
+                    <p class="service-description">Premium childcare services with educational activities in a safe, nurturing environment</p>
+                    <div class="service-link">
+                        <span>Learn More</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                </a>
+
+                <a href="dry.html" class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M12 2L3 7v10l9 5 9-5V7L12 2z"></path>
+                            <path d="M7 10l5 3 5-3"></path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Premium Dry Fruits</h3>
+                    <p class="service-description">Handpicked selection of organic dry fruits and nuts for health-conscious living</p>
+                    <div class="service-link">
+                        <span>Explore Products</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                </a>
+
+                <a href="index.html" class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M12 2L3 7v10l9 5 9-5V7L12 2z"></path>
+                            <path d="M7 10l5 3 5-3"></path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Real Estate</h3>
+                    <p class="service-description">Handpicked selection of luxury homes and prime properties for discerning living.</p>
+                    <div class="service-link">
+                        <span>Explore Products</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Features Section -->
+    <section id="features" class="section features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Gangothri Group</h2>
+                <p class="section-description">Experience premium service with our customer-focused approach</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Trusted Service</h3>
+                    <p class="feature-description">12+ years of experience serving thousands of satisfied customers</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 6v6l4 2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Time Saving</h3>
+                    <p class="feature-description">Complete your documentation and services in minimal time</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Expert Team</h3>
+                    <p class="feature-description">Professionals with expertise in all service domains</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Transparent Pricing</h3>
+                    <p class="feature-description">No hidden charges with clear service breakdown</p>
+                </div>
+            </div>
+        </div>
+    </section>
+ <a href="https://wa.me/+917356780758" class="float-whatsapp" target="_blank">
+  <i class="fa fa-whatsapp my-float"></i>
+</a>
+    <!-- Process Section -->
+    <section id="process" class="section process">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How Our Service Works</h2>
+                <p class="section-description">Simple steps to get your services completed hassle-free</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-icon">
+                        <span>1</span>
+                    </div>
+                    <h3 class="step-title">Consultation</h3>
+                    <p class="step-description">Contact us with your requirements for a free consultation</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <span>2</span>
+                    </div>
+                    <h3 class="step-title">Documentation</h3>
+                    <p class="step-description">Provide necessary documents through secure channels</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <span>3</span>
+                    </div>
+                    <h3 class="step-title">Processing</h3>
+                    <p class="step-description">Our experts handle all procedures and formalities</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <span>4</span>
+                    </div>
+                    <h3 class="step-title">Delivery</h3>
+                    <p class="step-description">Receive completed services with full support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-description">Hear from our satisfied customers across Trivandrum</p>
+            </div>
+            
+            <div class="testimonial-card">
+                <p class="testimonial-content">Gangothri Group handled all my GST filing and tax documentation with such professionalism. They saved me countless hours and made everything so simple. Highly recommended for business owners!</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar" style="background-image: url('https://randomuser.me/api/portraits/men/32.jpg');"></div>
+                    <div class="author-info">
+                        <h4>Rajeev Menon</h4>
+                        <p>Business Owner, Kochi</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <p class="testimonial-content">Their travel booking service is exceptional. I got the best deals on flights and hotels for my family vacation. The FASTAG and PAN assistance was also completed quickly. Truly a one-stop solution!</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar" style="background-image: url('https://randomuser.me/api/portraits/women/44.jpg');"></div>
+                    <div class="author-info">
+                        <h4>Priya Nair</h4>
+                        <p>Government Employee, Trivandrum</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <p class="testimonial-content">The loan project report prepared by Gangothri helped me secure funding for my startup. Their expertise in documentation and knowledge of banking procedures is unmatched in Trivandrum.</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar" style="background-image: url('https://randomuser.me/api/portraits/men/67.jpg');"></div>
+                    <div class="author-info">
+                        <h4>Suresh Kumar</h4>
+                        <p>Entrepreneur, Kozhikode</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-description">Reach out to us for any service inquiries or support</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label class="form-label">Your Name</label>
+                            <input type="text" class="form-input" placeholder="Enter your name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-input" placeholder="Enter your email">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Phone Number</label>
+                            <input type="tel" class="form-input" placeholder="Enter your phone number">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Service Interested In</label>
+                            <select class="form-input">
+                                <option>Select a service</option>
+                                <option>GST/IT Filing</option>
+                                <option>Travel Bookings</option>
+                                <option>Banking Services</option>
+                                <option>Money Transfer</option>
+                                <option>Forex Services</option>
+                                <option>FASTAG</option>
+                                <option>PAN Card Assistance</option>
+                                <option>Loan Project Report</option>
+                                <option>Government Certificates</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-input" rows="4" placeholder="Enter your message"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary btn-large">Submit Request</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone & WhatsApp</h3>
+                            <p>+91 9539041595<br>+91 9876543211</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email Address</h3>
+                            <p>gangothrigroup@gangothri.co.in</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Office Locations</h3>
+                            <p>Kochi, Ernakulam<br>Trivandrum, Kozhikode<br>Thrissur, Kannur</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Working Hours</h3>
+                            <p>Monday-Saturday: 9AM - 7PM<br>Sunday: 10AM - 2PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="#" class="footer-logo">
+                        <div class="logo-icon">
+                            <span>G</span>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-main">Gangothri Group</span>
+                            <span class="logo-sub">General Services</span>
+                        </div>
+                    </a>
+                    <p class="footer-description">Trivandrum's premier one-stop solution for all essential services since 2012. We simplify your documentation, travel, banking, and compliance needs.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="footer-title">Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">GST & IT Filing</a></li>
+                        <li><a href="#">Travel Bookings</a></li>
+                        <li><a href="#">Banking Services</a></li>
+                        <li><a href="#">Money Transfer</a></li>
+                        <li><a href="#">Forex Services</a></li>
+                        <li><a href="#">FASTAG</a></li>
+                        <li><a href="#">PAN Card Assistance</a></li>
+                        <li><a href="#">Loan Project Reports</a></li>
+                        <li><a href="#">Government Certificates</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Service Areas</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-title">Service Areas</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Kochi</a></li>
+                        <li><a href="#">Trivandrum</a></li>
+                        <li><a href="#">Kozhikode</a></li>
+                        <li><a href="#">Thrissur</a></li>
+                        <li><a href="#">Kollam</a></li>
+                        <li><a href="#">Alappuzha</a></li>
+                        <li><a href="#">Kannur</a></li>
+                        <li><a href="#">Kottayam</a></li>
+                        <li><a href="#">Malappuram</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2024 Gangothri Group. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

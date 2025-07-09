@@ -1,0 +1,1853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gangothri Dry Fruits - Premium Quality Dry Fruits & Nuts</title>
+    <meta name="description" content="Discover premium quality dry fruits, nuts, and healthy snacks. Handpicked from the finest sources for exceptional taste and nutrition.">
+    <meta name="author" content="Gangothri Dry Fruits">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="styles/main.css">
+   <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #8C6A3F;
+            --secondary: #D4A762;
+            --accent: #6B8E23;
+            --light: #F8F5F0;
+            --dark: #3A2D1D;
+            --white: #FFFFFF;
+            --gray: #6C757D;
+            --light-gray: #F1F1F1;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            background-color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 16px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-large {
+            padding: 15px 35px;
+            font-size: 18px;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: var(--white);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 12px;
+        }
+
+        .logo-icon span {
+            color: var(--white);
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-main {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .logo-sub {
+            font-size: 12px;
+            color: var(--primary);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-desktop {
+            display: flex;
+        }
+
+        .nav-desktop .nav-link {
+            margin: 0 15px;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            position: relative;
+            padding: 5px 0;
+            transition: var(--transition);
+        }
+
+        .nav-desktop .nav-link:hover,
+        .nav-desktop .nav-link.active {
+            color: var(--primary);
+        }
+
+        .nav-desktop .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-desktop .nav-link:hover::after,
+        .nav-desktop .nav-link.active::after {
+            width: 100%;
+        }
+
+        .header-cta {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-cta button {
+            margin-left: 15px;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: var(--dark);
+            margin: 4px 0;
+            transition: var(--transition);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 85px;
+        }
+
+        .hero-slider {
+            position: relative;
+            height: 100%;
+        }
+
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+            z-index: 1;
+        }
+
+        .hero-slide:nth-child(1) {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./image/b1.jpg');
+        }
+
+        .hero-slide:nth-child(2) {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./image/b2.jpg');
+        }
+
+        .hero-slide:nth-child(3) {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./image/b3.jpg');
+        }
+
+        .hero-content {
+            max-width: 650px;
+            color: var(--white);
+            padding: 20px;
+        }
+
+        .hero-location {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .hero-location svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            stroke-width: 2;
+        }
+
+        .hero-location span {
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+
+        .hero-title {
+            font-size: 60px;
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .hero-description {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        .hero-price {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: var(--secondary);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .hero-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 10;
+            transition: var(--transition);
+        }
+
+        .hero-nav:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .hero-nav svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--white);
+            stroke-width: 2;
+        }
+
+        .hero-prev {
+            left: 30px;
+        }
+
+        .hero-next {
+            right: 30px;
+        }
+
+        .hero-indicators {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .indicator.active {
+            background: var(--white);
+            transform: scale(1.2);
+        }
+
+        .hero-stats {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 0;
+            z-index: 10;
+        }
+
+        .stat {
+            text-align: center;
+            color: var(--white);
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+
+        /* Featured Products */
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            padding: 80px 20px 0;
+        }
+
+        .section-title {
+            font-size: 42px;
+            margin-bottom: 15px;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+
+        .section-description {
+            font-size: 18px;
+            color: var(--gray);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-image {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--accent);
+            color: var(--white);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-category {
+            color: var(--secondary);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .product-name {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .product-description {
+            color: var(--gray);
+            font-size: 15px;
+            margin-bottom: 15px;
+            height: 60px;
+            overflow: hidden;
+        }
+
+        .product-price {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .price {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .add-to-cart {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+        }
+
+        .add-to-cart:hover {
+            background: var(--secondary);
+            transform: scale(1.1);
+        }
+
+        .section-footer {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        /* Health Benefits */
+        .health-benefits {
+            background-color: var(--light);
+            padding: 80px 0;
+        }
+
+        .benefits-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .benefit-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .benefit-icon {
+            background: var(--primary);
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 32px;
+        }
+
+        .benefit-content {
+            padding: 25px;
+        }
+
+        .benefit-title {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .benefit-description {
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+
+        .learn-more {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .learn-more i {
+            margin-left: 8px;
+            transition: var(--transition);
+        }
+
+        .learn-more:hover i {
+            transform: translateX(5px);
+        }
+
+        /* Corporate Gifting */
+        .gifting-section {
+            background: linear-gradient(rgba(58, 45, 29, 0.9), rgba(58, 45, 29, 0.9)), url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .gifting-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .gifting-title {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .gifting-description {
+            font-size: 18px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .gifting-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+
+        .feature-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .feature-description {
+            opacity: 0.8;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+        }
+
+        .testimonials-carousel {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .testimonial {
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            padding: 40px;
+            text-align: center;
+            margin: 0 20px;
+        }
+
+        .testimonial-content {
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: 30px;
+            color: var(--gray);
+            position: relative;
+        }
+
+        .testimonial-content::before,
+        .testimonial-content::after {
+            content: """;
+            font-size: 60px;
+            position: absolute;
+            color: var(--light-gray);
+            font-family: serif;
+            line-height: 1;
+        }
+
+        .testimonial-content::before {
+            top: -20px;
+            left: -10px;
+        }
+
+        .testimonial-content::after {
+            content: """;
+            bottom: -40px;
+            right: -10px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .author-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+
+        .author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-info {
+            text-align: left;
+        }
+
+        .author-name {
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .author-position {
+            font-size: 14px;
+            color: var(--secondary);
+        }
+
+        .carousel-navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .carousel-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .carousel-btn:hover {
+            background: var(--secondary);
+        }
+
+        .carousel-btn svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .carousel-indicators {
+            display: flex;
+            margin: 0 20px;
+        }
+
+        .carousel-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--light-gray);
+            margin: 0 5px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .carousel-indicator.active {
+            background: var(--primary);
+            transform: scale(1.2);
+        }
+
+        .trust-indicators {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+            padding: 0 20px;
+        }
+
+        .trust-stat {
+            text-align: center;
+            background: var(--white);
+            padding: 30px 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .trust-number {
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .trust-label {
+            font-size: 18px;
+            color: var(--gray);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding-top: 80px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            padding: 0 20px;
+        }
+
+        .footer-section {
+            margin-bottom: 30px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo .logo-icon {
+            background-color: var(--secondary);
+        }
+
+        .footer-description {
+            opacity: 0.8;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .footer-title {
+            font-size: 22px;
+            margin-bottom: 25px;
+            color: var(--secondary);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: var(--transition);
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+            opacity: 1;
+            transform: translateX(5px);
+        }
+
+        .footer-links a i {
+            margin-right: 10px;
+            color: var(--secondary);
+        }
+
+        .footer-contact {
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .contact-item svg {
+            width: 20px;
+            min-width: 20px;
+            margin-right: 15px;
+            stroke: var(--secondary);
+            stroke-width: 1.5;
+        }
+
+        .contact-item span {
+            opacity: 0.8;
+        }
+
+        .newsletter {
+            padding: 50px 20px;
+            margin-top: 50px;
+        }
+
+        .newsletter-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--white);
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .newsletter-text {
+            flex: 1;
+            min-width: 300px;
+            margin-right: 30px;
+            margin-bottom: 20px;
+        }
+
+        .newsletter-title {
+            font-size: 28px;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .newsletter-description {
+            color: var(--gray);
+        }
+
+        .newsletter-form {
+            display: flex;
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 15px 20px;
+            border: 2px solid var(--light-gray);
+            border-radius: 4px 0 0 4px;
+            font-size: 16px;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .newsletter-input:focus {
+            border-color: var(--primary);
+        }
+
+        .newsletter-form .btn-primary {
+            border-radius: 0 4px 4px 0;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .footer-copyright {
+            opacity: 0.7;
+            margin-bottom: 20px;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--secondary);
+            transform: translateY(-5px);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 50px;
+            }
+
+            .hero-subtitle {
+                font-size: 22px;
+            }
+
+            .nav-desktop {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 40px;
+            }
+
+            .hero-subtitle {
+                font-size: 20px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .hero-nav {
+                width: 50px;
+                height: 50px;
+            }
+
+            .section-title {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 32px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+
+            .testimonial {
+                padding: 30px 20px;
+            }
+
+            .newsletter-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .newsletter-text {
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+
+            .newsletter-form {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <a href="#" class="logo">
+                    <div class="logo-icon">
+                        <span>G</span>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-main">Gangothri</span>
+                        <span class="logo-sub">Dry Fruits</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#about" class="nav-link">About Us</a>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-link">More</a>
+                        <div class="dropdown-content">
+                          <a href="daycaer.html">Daycare & Play</a>
+                          <a href="index.html">Real Estate</a>
+                          <a href="other.html">General Services</a>
+                        </div>
+                      </div>
+                    
+                </nav>
+
+                <!-- Desktop CTA -->
+                <div class="header-cta">
+                    <button class="btn-ghost">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                    <button class="btn-primary">Shop Now</button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <nav class="mobile-nav">
+                <a href="#home" class="mobile-nav-link">Home</a>
+                <a href="#about" class="mobile-nav-link">About Us</a>
+                <a href="#products" class="mobile-nav-link">Products</a>
+                <a href="#benefits" class="mobile-nav-link">Health Benefits</a>
+                <a href="#gifting" class="mobile-nav-link">Corporate Gifting</a>
+                <a href="#contact" class="mobile-nav-link">Contact</a>
+            </nav>
+            <div class="mobile-cta">
+                <button class="btn-outline">
+                    <i class="fas fa-shopping-cart"></i>
+                    View Cart
+                </button>
+                <button class="btn-primary">Shop Now</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-slider" id="heroSlider">
+            <div class="hero-slide active">
+                <div class="hero-content">
+                    <div class="hero-location">
+                        <i class="fas fa-leaf"></i>
+                        <span>Premium Quality • Natural Goodness</span>
+                    </div>
+                    <h1 class="hero-title">Premium Dry Fruits & Nuts</h1>
+                    <p class="hero-subtitle">Handpicked from the Finest Sources</p>
+                    <p class="hero-description">Discover our exquisite collection of premium dry fruits, nuts and healthy snacks sourced from the best regions around the world.</p>
+                    <div class="hero-price">Free Shipping on Orders Over ₹2000</div>
+                    <div class="hero-buttons">
+                        <button class="btn-primary btn-large">Shop Now</button>
+                        <button class="btn-outline btn-large">
+                            <i class="fas fa-gift"></i>
+                            Gift Packages
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-slide">
+                <div class="hero-content">
+                    <div class="hero-location">
+                        <i class="fas fa-heart"></i>
+                        <span>Healthy Living • Pure Nutrition</span>
+                    </div>
+                    <h1 class="hero-title">Nature's Nutritional Powerhouse</h1>
+                    <p class="hero-subtitle">Fuel Your Body with Nature's Best</p>
+                    <p class="hero-description">Experience the health benefits of our premium dry fruits packed with essential nutrients and antioxidants.</p>
+                    <div class="hero-price">New Customers Get 15% Off</div>
+                    <div class="hero-buttons">
+                        <button class="btn-primary btn-large">Shop Now</button>
+                        <button class="btn-outline btn-large">
+                            <i class="fas fa-book"></i>
+                            Health Guide
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-slide">
+                <div class="hero-content">
+                    <div class="hero-location">
+                        <i class="fas fa-gift"></i>
+                        <span>Elegant Packaging • Memorable Gifts</span>
+                    </div>
+                    <h1 class="hero-title">Luxury Corporate Gifting</h1>
+                    <p class="hero-subtitle">Impress Your Clients with Premium Gifts</p>
+                    <p class="hero-description">Customizable gourmet dry fruit gift boxes perfect for corporate gifting and special occasions.</p>
+                    <div class="hero-price">Bulk Order Discounts Available</div>
+                    <div class="hero-buttons">
+                        <button class="btn-primary btn-large">Shop Gifts</button>
+                        <button class="btn-outline btn-large">
+                            <i class="fas fa-phone-alt"></i>
+                            Request Quote
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <button class="hero-nav hero-prev" id="heroPrev">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="hero-nav hero-next" id="heroNext">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <!-- Indicators -->
+        <div class="hero-indicators" id="heroIndicators">
+            <button class="indicator active" data-slide="0"></button>
+            <button class="indicator" data-slide="1"></button>
+            <button class="indicator" data-slide="2"></button>
+        </div>
+
+        <!-- Stats -->
+      
+    </section>
+
+    <!-- Featured Products -->
+    <section id="products" class="featured-properties">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Products</h2>
+                <p class="section-description">Discover our premium collection of dry fruits, nuts, and healthy snacks carefully selected for quality and taste.</p>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="image/b4.webp" alt="Premium Almonds">
+                    </div>
+                    <div class="product-badge">Best Seller</div>
+                    <div class="product-info">
+                        <div class="product-category">Nuts</div>
+                        <h3 class="product-name">California Almonds</h3>
+                        <p class="product-description">Premium quality California almonds, rich in nutrients and perfect for healthy snacking.</p>
+                        <div class="product-price">
+                            <div class="price">₹650/kg</div>
+                            <a href="https://wa.me/917356780758?text=Hi" style="
+    color: transparent;
+"><button class="add-to-cart">
+                <i class="fas fa-plus"></i>
+            </button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="image/b5.webp" alt="Premium Pistachios">
+                    </div>
+                    <div class="product-badge">New Arrival</div>
+                    <div class="product-info">
+                        <div class="product-category">Nuts</div>
+                        <h3 class="product-name">Iranian Pistachios</h3>
+                        <p class="product-description">Premium Iranian pistachios known for their rich flavor and nutritional benefits.</p>
+                        <div class="product-price">
+                            <div class="price">₹950/kg</div>
+                            <a href="https://wa.me/917356780758?text=Hi" style="
+    color: transparent;
+"><button class="add-to-cart">
+                <i class="fas fa-plus"></i>
+            </button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="image/b7.webp" alt="Premium Cashews">
+                    </div>
+                    <div class="product-badge">Premium</div>
+                    <div class="product-info">
+                        <div class="product-category">Nuts</div>
+                        <h3 class="product-name">W320 Cashew Nuts</h3>
+                        <p class="product-description">Large whole cashew nuts, carefully selected for size and quality. Perfect for gifting.</p>
+                        <div class="product-price">
+                            <div class="price">₹850/kg</div>
+                            <a href="https://wa.me/917356780758?text=Hi" style="
+    color: transparent;
+"><button class="add-to-cart">
+                <i class="fas fa-plus"></i>
+            </button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="image/k1.jpg" alt="Premium Dates">
+                    </div>
+                    <div class="product-badge"></div>
+                    <div class="product-info">
+                        <div class="product-category">kismis black</div>
+                        <h3 class="product-name">Raisins kismis</h3>
+                        <p class="product-description">Organic Black Kismis, prized for their deep color, sweet-tart flavor</p>
+                        <div class="product-price">
+                            <div class="price">₹450/kg</div>
+                            <a href="https://wa.me/917356780758?text=Hi" style="
+    color: transparent;
+"><button class="add-to-cart">
+                <i class="fas fa-plus"></i>
+            </button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="image/b6.jpg" alt="Premium Dates">
+                    </div>
+                    <div class="product-badge">Organic</div>
+                    <div class="product-info">
+                        <div class="product-category">Dry Fruits</div>
+                        <h3 class="product-name">Medjool Dates</h3>
+                        <p class="product-description">Organic Medjool dates, known as the "king of dates" for their large size and rich flavor.</p>
+                        <div class="product-price">
+                            <div class="price">₹550/kg</div>
+                            <a href="https://wa.me/917356780758?text=Hi" style="
+    color: transparent;
+"><button class="add-to-cart">
+                <i class="fas fa-plus"></i>
+            </button></a>
+                        </div>
+                    </div>
+                </div>
+                 <div class="product-card">
+    <div class="product-image">
+        <img src="image/k2.jpeg" alt="Golden Raisins">
+    </div>
+    <div class="product-badge">Organic</div>
+    <div class="product-info">
+        <div class="product-category">Dry Fruits</div>
+        <h3 class="product-name">Golden Raisins</h3>
+        <p class="product-description">Sun-dried golden raisins, prized for their sweet, tangy flavor and soft texture—a natural energy booster rich in iron and fiber.</p>
+        <div class="product-price">
+            <div class="price">₹450/kg</div>
+            <a href="https://wa.me/917356780758?text=Hi" style="
+    color: transparent;
+"><button class="add-to-cart">
+                <i class="fas fa-plus"></i>
+            </button></a>
+        </div>
+    </div>
+</div>
+            </div>
+              
+            <div class="section-footer">
+                <button class="btn-outline btn-large">View All Products</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Benefits -->
+    <section id="benefits" class="health-benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Health Benefits</h2>
+                <p class="section-description">Discover why premium dry fruits are essential for a healthy lifestyle and how they can benefit your wellbeing.</p>
+            </div>
+
+            <div class="benefits-container">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3 class="benefit-title">Heart Health</h3>
+                        <p class="benefit-description">Dry fruits like almonds  are rich in healthy fats and antioxidants that support cardiovascular health and reduce bad cholesterol levels.</p>
+                        <a href="#" class="learn-more">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3 class="benefit-title">Brain Function</h3>
+                        <p class="benefit-description">Nuts like  almonds contain nutrients that enhance cognitive function, improve memory, and support overall brain health.</p>
+                        <a href="#" class="learn-more">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-weight"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3 class="benefit-title">Weight Management</h3>
+                        <p class="benefit-description">High in fiber and protein, dry fruits help control appetite, boost metabolism, and support healthy weight management goals.</p>
+                        <a href="#" class="learn-more">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+       <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-description">Explore our comprehensive range of premium services tailored for your luxury lifestyle</p>
+            </div>
+
+            <div class="services-grid">
+                <a href="daycaer.html" class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            <path d="M9.5 9h5M12 12v6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Daycare & Play</h3>
+                    <p class="service-description">Premium childcare services with educational activities in a safe, nurturing environment</p>
+                    <div class="service-link">
+                        <span>Learn More</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                </a>
+
+                <a href="index.html" class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M12 2L3 7v10l9 5 9-5V7L12 2z"></path>
+                            <path d="M7 10l5 3 5-3"></path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Real Estate</h3>
+                    <p class="service-description">Handpicked selection of luxury homes and prime properties for discerning living.</p>
+                    <div class="service-link">
+                        <span>Explore Products</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                </a>
+
+                <a href="other.html" class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M3 3h18v18H3z"></path>
+                            <path d="M8 8h8v8H8z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">General Services</h3>
+                    <p class="service-description">Comprehensive solutions including home maintenance, concierge, and more</p>
+                    <div class="service-link">
+                        <span>Discover Services</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Corporate Gifting -->
+    <section id="gifting" class="gifting-section">
+        <div class="container">
+            <div class="gifting-content">
+                <h2 class="gifting-title">Premium Corporate Gifting</h2>
+                <p class="gifting-description">Impress your clients and employees with our luxurious dry fruit gift boxes. Customizable packaging and premium selections for every occasion.</p>
+                
+                <div class="hero-buttons">
+                    <button class="btn-primary btn-large">View Gift Collections</button>
+                    <button class="btn-outline btn-large">Request Corporate Quote</button>
+                </div>
+                
+                <div class="gifting-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <h4 class="feature-title">Custom Packaging</h4>
+                        <p class="feature-description">Branded with your logo and message</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4 class="feature-title">Premium Selection</h4>
+                        <p class="feature-description">Only the finest quality products</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h4 class="feature-title">Nationwide Delivery</h4>
+                        <p class="feature-description">Reliable delivery to any location</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <h4 class="feature-title">Bulk Discounts</h4>
+                        <p class="feature-description">Special pricing for corporate orders</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Customer Testimonials</h2>
+                <p class="section-description">Hear what our satisfied customers have to say about our premium dry fruits and services.</p>
+            </div>
+
+            <div class="testimonials-carousel">
+                <div class="testimonial">
+                    <p class="testimonial-content">Gangothri Dry Fruits has become our go-to supplier for corporate gifting. The quality of their products is exceptional, and the customized packaging always impresses our clients. Their attention to detail and reliable service make them stand out.</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rajesh Kumar">
+                        </div>
+                        <div class="author-info">
+                            <div class="author-name">Rajesh Kumar</div>
+                            <div class="author-position">Procurement Manager, TechSolutions Ltd.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-navigation">
+                <button class="carousel-btn carousel-prev" id="testimonialsPrev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="carousel-indicators">
+                    <button class="carousel-indicator active"></button>
+                    <button class="carousel-indicator"></button>
+                    <button class="carousel-indicator"></button>
+                </div>
+                <button class="carousel-btn carousel-next" id="testimonialsNext">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="trust-indicators">
+                <div class="trust-stat">
+                    <div class="trust-number">5000+</div>
+                    <div class="trust-label">Happy Customers</div>
+                </div>
+                <div class="trust-stat">
+                    <div class="trust-number">250+</div>
+                    <div class="trust-label">Corporate Clients</div>
+                </div>
+                <div class="trust-stat">
+                    <div class="trust-number">98%</div>
+                    <div class="trust-label">Customer Satisfaction</div>
+                </div>
+                <div class="trust-stat">
+                    <div class="trust-number">25+</div>
+                    <div class="trust-label">Years Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+ <a href="https://wa.me/+917356780758" class="float-whatsapp" target="_blank">
+  <i class="fa fa-whatsapp my-float"></i>
+</a>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="#" class="footer-logo">
+                        <div class="logo-icon">
+                            <span>G</span>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-main">Gangothri</span>
+                            <span class="logo-sub">Dry Fruits</span>
+                        </div>
+                    </a>
+                    <p class="footer-description">Trivandrum's premier supplier of premium dry fruits and nuts. We source the finest quality products from around the world to bring you nature's nutritional powerhouses.</p>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+91 98765 43210</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>gangothrigroup@gangothri.co.in</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Trivandrum 695583</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="#products"><i class="fas fa-chevron-right"></i> Our Products</a></li>
+                        <li><a href="#benefits"><i class="fas fa-chevron-right"></i> Health Benefits</a></li>
+                        <li><a href="#gifting"><i class="fas fa-chevron-right"></i> Corporate Gifting</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Product Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Almonds</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Cashews</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Pistachios</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Dates & Figs</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Business Hours</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-clock"></i> Monday - Friday: 9AM - 7PM</li>
+                        <li><i class="fas fa-clock"></i> Saturday: 10AM - 6PM</li>
+                        <li><i class="fas fa-clock"></i> Sunday: 10AM - 2PM</li>
+                        <li><i class="fas fa-truck"></i> Delivery: All Days 10AM-8PM</li>
+                        <li><i class="fas fa-store"></i> Store: Ernakulam, Kochi</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="newsletter">
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <h3 class="newsletter-title">Join Our Newsletter</h3>
+                        <p class="newsletter-description">Subscribe to receive updates, special offers, health tips, and new product arrivals.</p>
+                    </div>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Enter your email" class="newsletter-input" required>
+                        <button type="submit" class="btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    © 2024 Gangothri Dry Fruits. All rights reserved. | Privacy Policy | Terms of Service
+                </div>
+                <div class="footer-social">
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Hero Slider Functionality
+        const heroSlider = document.getElementById('heroSlider');
+        const heroSlides = heroSlider.querySelectorAll('.hero-slide');
+        const indicators = document.querySelectorAll('.indicator');
+        const prevBtn = document.getElementById('heroPrev');
+        const nextBtn = document.getElementById('heroNext');
+        
+        let currentSlide = 0;
+        const slideCount = heroSlides.length;
+        
+        function showSlide(index) {
+            // Hide all slides
+            heroSlides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            
+            // Remove active class from indicators
+            indicators.forEach(indicator => {
+                indicator.classList.remove('active');
+            });
+            
+            // Show current slide
+            heroSlides[index].classList.add('active');
+            indicators[index].classList.add('active');
+            currentSlide = index;
+        }
+        
+        function nextSlide() {
+            let next = currentSlide + 1;
+            if (next >= slideCount) next = 0;
+            showSlide(next);
+        }
+        
+        function prevSlide() {
+            let prev = currentSlide - 1;
+            if (prev < 0) prev = slideCount - 1;
+            showSlide(prev);
+        }
+        
+        // Auto slide
+        let slideInterval = setInterval(nextSlide, 5000);
+        
+        // Reset interval on user interaction
+        function resetInterval() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+        
+        // Event listeners
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetInterval();
+        });
+        
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            resetInterval();
+        });
+        
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                showSlide(index);
+                resetInterval();
+            });
+        });
+        
+        // Initialize slider
+        showSlide(0);
+        
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking a link
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                mobileMenuBtn.classList.remove('active');
+            });
+        });
+        
+        // Testimonial Carousel
+        const testimonialsPrev = document.getElementById('testimonialsPrev');
+        const testimonialsNext = document.getElementById('testimonialsNext');
+        const testimonialIndicators = document.querySelectorAll('.carousel-indicator');
+        
+        testimonialIndicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                testimonialIndicators.forEach(ind => ind.classList.remove('active'));
+                indicator.classList.add('active');
+            });
+        });
+        
+        testimonialsPrev.addEventListener('click', () => {
+            // In a real implementation, this would cycle through testimonials
+            let current = document.querySelector('.carousel-indicator.active');
+            let prev = current.previousElementSibling || 
+                       document.querySelector('.carousel-indicators').lastElementChild;
+            
+            current.classList.remove('active');
+            prev.classList.add('active');
+        });
+        
+        testimonialsNext.addEventListener('click', () => {
+            // In a real implementation, this would cycle through testimonials
+            let current = document.querySelector('.carousel-indicator.active');
+            let next = current.nextElementSibling || 
+                       document.querySelector('.carousel-indicators').firstElementChild;
+            
+            current.classList.remove('active');
+            next.classList.add('active');
+        });
+        
+        // Add to cart animation
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                this.innerHTML = '<i class="fas fa-check"></i>';
+                setTimeout(() => {
+                    this.innerHTML = '<i class="fas fa-plus"></i>';
+                }, 2000);
+            });
+        });
+        
+        // Newsletter form submission
+        const newsletterForm = document.getElementById('newsletterForm');
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const emailInput = this.querySelector('.newsletter-input');
+            alert(`Thank you for subscribing with ${emailInput.value}! You'll receive our updates soon.`);
+            emailInput.value = '';
+        });
+    </script>
+</body>
+</html>
