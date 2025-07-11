@@ -1,0 +1,921 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gangothri Group - Premium Services in Trivandrum</title>
+    <meta name="description" content="Discover Gangothri Group's premium services including real estate, daycare, dry fruits, and general services in Trivandrum.">
+    <meta name="author" content="Gangothri Group">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gangothri.co.in/">
+    <meta property="og:title" content="Gangothri Group - Premium Services in Trivandrum">
+    <meta property="og:description" content="Discover Gangothri Group's premium services including real estate, daycare, dry fruits, and general services in Trivandrum.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2000">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://gangothri.co.in/">
+    <meta property="twitter:title" content="Gangothri Group - Premium Services in Trivandrum">
+    <meta property="twitter:description" content="Discover Gangothri Group's premium services including real estate, daycare, dry fruits, and general services in Trivandrum.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2000">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #4a9fcc;
+            --primary-dark: #2c7ba8;
+            --secondary: #f9a826;
+            --accent: #ff6b6b;
+            --light: #f8f9fa;
+            --dark: #2c3e50;
+            --success: #2ecc71;
+            --playful: #ff9ff3;
+            --soft-gray: #f0f4f8;
+            --border-radius: 8px;
+            --box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: var(--soft-gray);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        /* Header Styles */
+        .header {
+            background-color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-r: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: var(--transition);
+        }
+        
+        .header.scrolled {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--playful));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .logo-main {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            line-height: 1.1;
+        }
+        
+        .logo-sub {
+            font-size: 0.9rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        /* Navigation */
+        .nav-link {
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: var(--transition);
+            margin: 0 0.5rem;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary) !important;
+        }
+        
+        .nav-link.active:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        
+        /* Dropdown Menu */
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            border-radius: var(--border-radius);
+        }
+        
+        .dropdown-item {
+            transition: var(--transition);
+        }
+        
+        .dropdown-item:hover {
+            background-color: var(--soft-gray);
+            color: var(--primary);
+        }
+        
+        /* Buttons */
+        .btn-primary {
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            border-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(74, 159, 204, 0.3);
+        }
+        
+        .btn-outline-primary {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline-primary:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .btn-secondary {
+            background: var(--secondary);
+            border-color: var(--secondary);
+        }
+        
+        .btn-secondary:hover {
+            background: #e8971d;
+            border-color: #e8971d;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(249, 168, 38, 0.3);
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            position: relative;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2000') no-repeat center center/cover;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero-content {
+            max-width: 700px;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-weight: 500;
+        }
+        
+        .hero-description {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+        
+        /* Services Section */
+        .service-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            text-decoration: none;
+            color: var(--dark);
+            height: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+        
+        .service-img {
+            height: 220px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .service-link {
+            display: flex;
+            align-items: center;
+            color: var(--primary);
+            font-weight: 600;
+            gap: 0.5rem;
+        }
+        
+        .service-card:hover .service-link i {
+            transform: translateX(5px);
+        }
+        
+        /* Stats Section */
+        .stats {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stats:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%232c7ba8' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.1;
+        }
+        
+        .stat-card {
+            text-align: center;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Testimonials */
+        .testimonial-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+            height: 100%;
+        }
+        
+        .testimonial-content {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .testimonial-content:before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: -15px;
+            font-size: 5rem;
+            font-family: 'Playfair Display', serif;
+            color: rgba(0,0,0,0.1);
+            line-height: 1;
+        }
+        
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--secondary);
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1541692641319-981cc79ee10a?q=80&w=2000') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: white;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+        
+        .footer-section h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+        
+        .footer-logo .logo-icon {
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+        }
+        
+        .footer-description {
+            color: #bbb;
+        }
+        
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+        
+        .contact-item {
+            color: #bbb;
+        }
+        
+        .contact-item i {
+            color: var(--primary);
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        
+        .social-link:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        /* WhatsApp Float */
+        .float-whatsapp {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-r: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .float-whatsapp:hover {
+            transform: scale(1.1);
+            background-color: #128C7E;
+        }
+        
+        /* Section Title */
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                text-align: center;
+            }
+            
+            .hero-content {
+                text-align: center;
+                margin: 0 auto;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.4rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="header" style="
+    z-index: 1;
+">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center text-decoration-none" href="#">
+                    <div class="logo-icon me-2">
+                        <span>G</span>
+                    </div>
+                    <div>
+                        <div class="logo-main">Gangothri</div>
+                        <div class="logo-sub">Group</div>
+                    </div>
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navigation -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="#home" class="nav-link active">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#services" class="nav-link">Services</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Our Businesses</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="r.html">Real Estate</a></li>
+                                <li><a class="dropdown-item" href="daycaer.html">Daycare & Play</a></li>
+                                <li><a class="dropdown-item" href="dry.html">Dry Fruits</a></li>
+                                <li><a class="dropdown-item" href="other.html">General Services</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#about" class="nav-link">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contact" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="d-flex ms-lg-3">
+                        <a href="tel:+919539041595" class="btn btn-outline-primary me-2">
+                            <i class="fas fa-phone-alt me-1"></i> +91 9539041595
+                        </a>
+                        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Premium Services for Your Lifestyle</h1>
+                <p class="hero-subtitle">Discover the Gangothri Group Difference</p>
+                <p class="hero-description">From luxury real estate to premium dry fruits and childcare services, we provide exceptional quality and service across all our businesses.</p>
+                <div class="d-flex gap-3">
+                    <a href="#services" class="btn btn-primary btn-lg">Our Services</a>
+                    <a href="#contact" class="btn btn-outline-light btn-lg">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Our Premium Services</h2>
+                <p class="section-description mt-3">Explore the diverse range of services offered by Gangothri Group</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <a href="r.html" class="service-card">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800" alt="Real Estate" class="service-img w-100">
+                        <div class="p-4">
+                            <h3 class="h4">Luxury Real Estate</h3>
+                            <p class="mb-3">Discover premium properties in Trivandrum's most exclusive locations, from waterfront villas to modern penthouses.</p>
+                            <div class="service-link">
+                                <span>Explore Properties</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <a href="daycaer.html" class="service-card">
+                        <img src="image/d2.jpg" alt="Daycare" class="service-img w-100">
+                        <div class="p-4">
+                            <h3 class="h4">Premium Daycare & Play</h3>
+                            <p class="mb-3">A safe, stimulating environment where children explore, learn, and grow through play-based learning.</p>
+                            <div class="service-link">
+                                <span>Learn More</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <a href="dry.html" class="service-card">
+                        <img src="image/d1.jpg" alt="Dry Fruits" class="service-img w-100">
+                        <div class="p-4">
+                            <h3 class="h4">Premium Dry Fruits</h3>
+                            <p class="mb-3">Handpicked selection of organic dry fruits and nuts for health-conscious living from the finest sources.</p>
+                            <div class="service-link">
+                                <span>View Products</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <a href="other.html" class="service-card">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800" alt="General Services" class="service-img w-100">
+                        <div class="p-4">
+                            <h3 class="h4">General Services</h3>
+                            <p class="mb-3">Comprehensive solutions including home maintenance, concierge services, and more for your convenience.</p>
+                            <div class="service-link">
+                                <span>Discover Services</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats py-5">
+        <div class="container position-relative">
+            <div class="text-center mb-5">
+                <h2 class="section-title text-white">Why Choose Gangothri Group</h2>
+                <p class="text-white">Our commitment to excellence is reflected in these numbers</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-6 col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Years of Experience</div>
+                    </div>
+                </div>
+                
+                <div class="col-6 col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                </div>
+                
+                <div class="col-6 col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Customer Satisfaction</div>
+                    </div>
+                </div>
+                
+                <div class="col-6 col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Premium Businesses</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="mt-3">Hear from our satisfied customers across all our businesses</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card h-100">
+                        <div class="testimonial-content">
+                            "Gangothri Group helped us find our dream home in Trivandrum. Their knowledge of the local market and attention to our needs was exceptional."
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rajesh Kumar" class="author-avatar me-3">
+                            <div>
+                                <h4 class="h5 mb-1">Rajesh Kumar</h4>
+                                <p class="mb-0">Real Estate Client</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="testimonial-card h-100">
+                        <div class="testimonial-content">
+                            "My child loves going to Gangothri Daycare. The staff are caring and professional, and the facilities are outstanding. I couldn't ask for more."
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya Nair" class="author-avatar me-3">
+                            <div>
+                                <h4 class="h5 mb-1">Priya Nair</h4>
+                                <p class="mb-0">Daycare Parent</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="testimonial-card h-100">
+                        <div class="testimonial-content">
+                            "The quality of Gangothri's dry fruits is unmatched. We use them for both personal consumption and corporate gifting. Always fresh and premium quality."
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Arun Menon" class="author-avatar me-3">
+                            <div>
+                                <h4 class="h5 mb-1">Arun Menon</h4>
+                                <p class="mb-0">Dry Fruits Customer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta py-5">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="cta-title mb-3">Ready to Experience Premium Service?</h2>
+                <p class="cta-description mb-4 mx-auto">Whether you're looking for a new home, quality childcare, premium dry fruits, or reliable services, we're here to help.</p>
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="#contact" class="btn btn-primary btn-lg">Contact Us Today</a>
+                    <a href="tel:+919539041595" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-phone-alt me-1"></i> Call Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer pt-5">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-4">
+                    <div class="footer-section">
+                        <a href="#" class="d-flex align-items-center text-decoration-none mb-3">
+                            <div class="logo-icon me-2">
+                                <span>G</span>
+                            </div>
+                            <div>
+                                <div class="logo-main">Gangothri</div>
+                                <div class="logo-sub">Group</div>
+                            </div>
+                        </a>
+                        <p class="footer-description mb-3">
+                            Providing premium services across multiple industries with a commitment to excellence and customer satisfaction.
+                        </p>
+                        <div class="d-flex align-items-center">
+                            <span class="me-2">Follow Us:</span>
+                            <div class="d-flex gap-2">
+                                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4">
+                    <div class="footer-section">
+                        <h3>Our Businesses</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="r.html">Real Estate</a></li>
+                            <li class="mb-2"><a href="daycaer.html">Daycare & Play</a></li>
+                            <li class="mb-2"><a href="dry.html">Dry Fruits</a></li>
+                            <li class="mb-2"><a href="other.html">General Services</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4">
+                    <div class="footer-section">
+                        <h3>Quick Links</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#home">Home</a></li>
+                            <li class="mb-2"><a href="#services">Services</a></li>
+                            <li class="mb-2"><a href="#about">About Us</a></li>
+                            <li class="mb-2"><a href="#contact">Contact</a></li>
+                            <li class="mb-2"><a href="#">Privacy Policy</a></li>
+                            <li class="mb-2"><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-4">
+                    <div class="footer-section">
+                        <h3>Contact Us</h3>
+                        <div class="footer-contact">
+                            <div class="contact-item mb-2">
+                                <i class="fas fa-map-marker-alt me-2"></i>
+                                <span>Trivandrum, Kerala, India</span>
+                            </div>
+                            <div class="contact-item mb-2">
+                                <i class="fas fa-phone-alt me-2"></i>
+                                <span>+91 9539041595</span><br>
+                                 <span>+91 9539041595</span>
+                            </div>
+                            <div class="contact-item mb-2">
+                                <i class="fas fa-envelope me-2"></i>
+                                <span>info@gangothri.co.in</span>
+                            </div>
+                            <div class="contact-item mb-2">
+                                <i class="fas fa-clock me-2"></i>
+                                <span>Mon-Sat: 9:00 AM - 7:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-top border-secondary pt-3 pb-2">
+                <div class="d-flex flex-wrap justify-content-between align-items-center">
+                    <p class="mb-0">© 2023 Gangothri Group. All Rights Reserved.</p>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/919539041595" class="float-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Header Scroll Effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Active Link Highlighting
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Animation on Scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.service-card, .stat-card, .testimonial-card');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }
+
+        // Set initial state for animated elements
+        document.querySelectorAll('.service-card, .stat-card, .testimonial-card').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        });
+
+        // Run on load and scroll
+        window.addEventListener('load', animateOnScroll);
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
+</body>
+</html>
