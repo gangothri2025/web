@@ -475,6 +475,65 @@
                 font-size: 2.2rem;
             }
         }
+        /* Hero Section Styling */
+.hero {
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 2rem !important;
+}
+
+.hero .btn {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    border: 2px solid rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.1);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    padding: 1rem 1.5rem;
+    width: 100%;
+}
+
+.hero .btn:hover {
+    background-color: var(--primary);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    border-color: transparent;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero .btn {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero .btn {
+        font-size: 0.9rem;
+    }
+}
     </style>
 </head>
 <body>
@@ -539,19 +598,30 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Premium Services for Your Lifestyle</h1>
-                <p class="hero-subtitle">Discover the Gangothri Group Difference</p>
-                <p class="hero-description">From luxury real estate to premium dry fruits and childcare services, we provide exceptional quality and service across all our businesses.</p>
-                <div class="d-flex gap-3">
-                    <a href="#services" class="btn btn-primary btn-lg">Our Services</a>
-                    <a href="#contact" class="btn btn-outline-light btn-lg">Contact Us</a>
+    <!-- Hero Section -->
+<section id="home" class="hero d-flex align-items-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h1 class="hero-title mb-5">GANGOTHRI GROUP</h1>
+                <div class="d-grid gap-3 mx-auto" style="max-width: 500px;">
+                    <a href="other.html" class="btn btn-primary btn-lg py-3">
+                        GANGOTHRI SEVA KENDRA
+                    </a>
+                    <a href="r.html" class="btn btn-primary btn-lg py-3">
+                        GANGOTHRI REAL ESTATE
+                    </a>
+                    <a href="daycaer.html" class="btn btn-primary btn-lg py-3">
+                        GANGOTHRI DAY CARE AND PLAY SCHOOL
+                    </a>
+                    <a href="dry.html" class="btn btn-primary btn-lg py-3">
+                        GANGOTHRI DRY FRUITS
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Services Section -->
     <section id="services" class="py-5 bg-white">
