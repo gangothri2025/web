@@ -483,95 +483,167 @@ function loadTours() {
     }
 }
 
-// Load testimonials data
-function loadTestimonials() {
-    const testimonials = [
+// Load properties data
+function loadProperties() {
+    const properties = [
         {
             id: 1,
-            name: 'Rajesh Menon',
-            location: 'Mumbai',
-            image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face',
-            rating: 5,
-            text: 'Gangothrigroup Real Estate made our dream of owning a waterfront villa in Alleppey come true. Their attention to detail and understanding of luxury is unmatched. The entire process was seamless and professional.',
-            property: 'Waterfront Villa, Alleppey',
-            investment: '₹12.5 Cr'
+            title: 'Luxury Technopark Apartment',
+            location: 'VALLAKKADAVU,THIRUVANATHAPURAM',
+            price: '₹1.5 Cr',
+            beds: 4,
+            baths: 5,
+            area: '4,500 sq ft',
+            image: 'image/a1.jpeg',
+            badge: 'Featured',
+            badgeColor: 'var(--Trivandrum-green-500)',
+            type: 'Villa',
+            pdf: 'pdf/luxury-villa-brochure.pdf',
+            whatsappMessage: 'Hi, I saw your Luxury Technopark Apartment in VALLACKADAVU listed for ₹1.5 Cr. Can you share more details about the amenities and available units?'
         },
         {
             id: 2,
-            name: 'Priya Sharma',
-            location: 'Bangalore',
-            image: 'https://images.unsplash.com/photo-1494790108755-2616b612b734?w=150&h=150&fit=crop&crop=face',
-            rating: 5,
-            text: 'As an NRI investor, I was looking for a trusted partner in Trivandrum real estate. The team exceeded all expectations with their market knowledge and transparent communication throughout my property acquisition.',
-            property: 'Modern Penthouse, Kochi',
-            investment: '₹8.2 Cr'
+            title: '3 cent land',
+            location: 'Near Don Bosco',
+            price: '₹7.2 lakhs//Cent',
+            beds: 0,
+            baths: 0,
+            area: '1306.8 sq ft',
+            image: 'image/3cent.png',
+            badge: 'New',
+            badgeColor: 'var(--Trivandrum-blue-500)',
+            type: 'Penthouse',
+            whatsappMessage: 'Hi, I saw your hare 3 cent land  Near Don Bosco can you share more details about the amenities and available units?'
         },
         {
             id: 3,
-            name: 'Dr. Suresh Kumar',
-            location: 'Delhi',
-            image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
-            rating: 5,
-            text: 'The heritage property they helped us acquire in Kumarakom is absolutely stunning. Their expertise in traditional Trivandrum architecture and modern amenities created the perfect blend we were seeking.',
-            property: 'Heritage Villa, Kumarakom',
-            investment: '₹6.8 Cr'
+            title: '5 cent land',
+            location: 'Near Bhavans school',
+            price: '₹13.2 lakhs//Cent',
+            beds: 0,
+            baths: 0,
+            area: '2178.0 sq ft',
+            image: 'image/5cent.png',
+            badge: 'Heritage',
+            badgeColor: 'var(--Trivandrum-gold-500)',
+            type: 'Traditional',
+            whatsappMessage: 'Hi, I saw your hare 5 cent land  Near Bhavans school can you share more details about the amenities and available units?'
         },
         {
             id: 4,
-            name: 'Anita Reddy',
-            location: 'Hyderabad',
-            image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face',
-            rating: 5,
-            text: 'Exceptional service from start to finish. The virtual tours were incredibly detailed, and the team\'s knowledge of Munnar\'s property market helped us make an informed investment decision.',
-            property: 'Hill Station Retreat, Munnar',
-            investment: '₹5.2 Cr'
+            title: 'A three-story luxury',
+            location: 'Sreekaryam',
+            price: '₹4.5 Cr',
+            beds: 14,
+            baths: 16,
+            area: '6000 sq ft',
+            image: 'image/g+3.png',
+            badge: 'Exclusive',
+            badgeColor: '#8b5cf6',
+            type: 'Traditional',
+            whatsappMessage: 'Hi, I saw your hare A three-story luxury  Near Bhavans school can you share more details about the amenities and available units?'
         },
         {
             id: 5,
-            name: 'Mohammed Ali',
-            location: 'Dubai',
-            image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face',
-            rating: 5,
-            text: 'Being based overseas, I needed a reliable partner for my Trivandrum investment. Their digital-first approach and comprehensive market insights made the entire process smooth and trustworthy.',
-            property: 'Beachfront Villa, Kovalam',
-            investment: '₹9.5 Cr'
+            title: '20 cent land',
+            location: 'Ayoor',
+            price: '₹2.2 Cr',
+            beds: 0,
+            baths: 0,
+            area: '8712 sq ft',
+            image: 'image/img.jpg',
+            badge: 'Mountain View',
+            badgeColor: '#10b981',
+            type: 'Traditional',
+            whatsappMessage: 'Hi, I saw your hare A 220 cent, facing main road Trivandrum Ayoor road, Asking price Rs. 11 lakhs/cent more details about the amenities and available units?'
+        },
+        {
+            id: 6,
+            title: 'Rajiv Nagar',
+            location: 'Kulathoor, Trivandrum',
+            price: '₹4.8 Cr',
+            beds: 4,
+            baths: 4,
+            area: '2,500 sq ft',
+            image: 'image/img1.jpg',
+            badge: 'Urban',
+            badgeColor: 'var(--gray-500)',
+            type: 'Apartment',
+            whatsappMessage: 'Hi, I saw your hare For sale- Two 4BHK villas at Rajiv Nagar near Radio Station Monvila   Details'
         }
     ];
     
-    const carousel = document.getElementById('testimonialsCarousel');
-    if (carousel) {
-        carousel.innerHTML = `
-            <div class="testimonials-track" id="testimonialsTrack">
-                ${testimonials.map(testimonial => `
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <img src="${testimonial.image}" alt="${testimonial.name}" class="testimonial-avatar">
-                            <div class="testimonial-info">
-                                <h3>${testimonial.name}</h3>
-                                <div class="testimonial-location">${testimonial.location}</div>
-                                <div class="testimonial-rating">
-                                    ${Array(testimonial.rating).fill().map(() => `
-                                        <svg class="star" viewBox="0 0 24 24" fill="currentColor">
-                                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
-                                        </svg>
-                                    `).join('')}
-                                </div>
-                            </div>
-                        </div>
-                        <svg class="testimonial-quote" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"></path>
-                        </svg>
-                        <p class="testimonial-text">${testimonial.text}</p>
-                        <div class="testimonial-footer">
-                            <div class="testimonial-property">${testimonial.property}</div>
-                            <div class="testimonial-investment">${testimonial.investment}</div>
-                        </div>
-                    </div>
-                `).join('')}
+    const grid = document.getElementById('propertiesGrid');
+    if (grid) {
+        grid.innerHTML = properties.map(property => `
+<div class="property-card">
+    <div class="property-image">
+        <img src="${property.image}" alt="${property.title}" loading="lazy">
+        <div class="property-badge" style="background-color: ${property.badgeColor}">
+            ${property.badge}
+        </div>
+        <div class="property-actions">
+            <button class="property-action" title="Add to favorites">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="property-content">
+        <div class="property-location">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            ${property.location}
+        </div>
+        <h3 class="property-title">${property.title}</h3>
+        <div class="property-price-row">
+            <span class="property-price">${property.price}</span>
+            <span class="property-type">${property.type}</span>
+        </div>
+        <div class="property-features">
+            <div class="property-feature">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3"></path>
+                    <path d="M2 16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"></path>
+                    <path d="M6 12v4"></path>
+                    <path d="M10 12v4"></path>
+                    <path d="M14 12v4"></path>
+                    <path d="M18 12v4"></path>
+                </svg>
+                ${property.beds} Beds
             </div>
-        `;
+            <div class="property-feature">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1 0l-1 1a1.5 1.5 0 0 0 0 1L6.5 9 9 6Z"></path>
+                    <path d="M15 6l2.5-2.5a1.5 1.5 0 0 1 1 0l1 1a1.5 1.5 0 0 1 0 1L17.5 9 15 6Z"></path>
+                    <path d="M9 18l-2.5 2.5a1.5 15 0 0 1-1 0l-1-1a1.5 1.5 0 0 1 0-1L6.5 15 9 18Z"></path>
+                    <path d="M15 18l2.5 2.5a1.5 1.5 0 0 0 1 0l1-1a1.5 1.5 0 0 0 0-1L17.5 15 15 18Z"></path>
+                    <rect width="7" height="7" x="8.5" y="8.5" rx="1"></rect>
+                </svg>
+                ${property.baths} Baths
+            </div>
+            <div class="property-feature">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
+                    <rect width="6" height="6" x="9" y="9" rx="1" ry="1"></rect>
+                </svg>
+                ${property.area}
+            </div>
+        </div>
+       <a href="https://wa.me/+919539041595?text=${encodeURIComponent(property.whatsappMessage)}" 
+   class="btn-primary property-button" 
+   target="_blank" 
+   style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+    <!-- SVG icon -->
+    Contact on WhatsApp
+</a>
+    </div>
+</div>`).join('');
     }
-    
+}
     // Initialize testimonials carousel
     let currentTestimonial = 0;
     const track = document.getElementById('testimonialsTrack');
