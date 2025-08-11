@@ -240,7 +240,7 @@ function loadProperties() {
             beds: 4,
             baths: 4,
             area: '2,500 sq ft',
-            image: 'image/img1.jpg',
+            image: 'image/img2.jpg',
             badge: 'Urban',
             badgeColor: 'var(--gray-500)',
             type: 'Apartment',
