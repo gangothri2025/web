@@ -250,11 +250,9 @@ function loadProperties() {
             badgeColor: 'var(--gray-500)',
             type: 'Apartment'
             ,
-             whatsappMessage: 'Hi, I saw your hare For sale- Two 4BHK villas at Rajiv Nagar near Radio Station Monvila   Details
-A 4.75 Cent, 4 BHK, 1500 sqft area- Rate 85 Lakhs B. 5.5 Cents, 4BHK, 1860 sqft area Rate 98 Lakhs
- about the amenities and available units?
+             whatsappMessage: 'Hi, I saw your hare For sale- Two 4BHK villas at Rajiv Nagar near Radio Station Monvila   Details'
+       },
 
-'
        
        
         }
