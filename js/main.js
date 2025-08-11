@@ -217,36 +217,46 @@ function loadProperties() {
             image: 'image/g+3.png',
             badge: 'Exclusive',
             badgeColor: '#8b5cf6',
-            type: 'Beach House'
+            type: 'Traditional'
             ,
             whatsappMessage: 'Hi, I saw your hare A three-story luxury  Near Bhavans school can you share more details about the amenities and available units?'
        
         },
         {
             id: 5,
-            title: 'Hill Station Retreat',
-            location: 'Ponmudi',
-            price: '₹5.2 Cr',
-            beds: 3,
-            baths: 3,
-            area: '2,800 sq ft',
-            image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=800',
+            title: '20 cent land',
+            location: 'Ayoor',
+            price: '₹2.2 Cr',
+            beds: 0,
+            baths: 0,
+            area: '8712 sq ft',
+            image: 'image/img.jpg',
             badge: 'Mountain View',
             badgeColor: '#10b981',
-            type: 'Retreat'
+            type: 'Traditional',
+             whatsappMessage: 'Hi, I saw your hare A 220 cent, facing main road Trivandrum Ayoor road, Asking price Rs. 11 lakhs/cent more details about the amenities and available units?'
+       
         },
         {
             id: 6,
-            title: 'Luxury City Apartment',
-            location: 'Trivandrum Central',
+            title: 'Rajiv Nagar',
+            location: 'Kulathoor, Trivandrum',
             price: '₹4.8 Cr',
-            beds: 3,
-            baths: 3,
+            beds: 4,
+            baths: 4,
             area: '2,500 sq ft',
-            image: 'https://images.unsplash.com/photo-1551038247-3d9af20df552?q=80&w=800',
+            image: 'image/img1.jpg',
             badge: 'Urban',
             badgeColor: 'var(--gray-500)',
             type: 'Apartment'
+            ,
+             whatsappMessage: 'Hi, I saw your hare For sale- Two 4BHK villas at Rajiv Nagar near Radio Station Monvila   Details
+A 4.75 Cent, 4 BHK, 1500 sqft area- Rate 85 Lakhs B. 5.5 Cents, 4BHK, 1860 sqft area Rate 98 Lakhs
+ about the amenities and available units?
+
+'
+       
+       
         }
     ];
     
