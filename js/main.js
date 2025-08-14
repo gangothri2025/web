@@ -236,16 +236,30 @@ function loadProperties() {
             id: 6,
             title: 'Rajiv Nagar',
             location: 'Kulathoor, Trivandrum',
-            price: '₹4.8 Cr',
+            price: '₹85Lk',
             beds: 4,
             baths: 4,
-            area: '2,500 sq ft',
+            area: '1,500 sq ft',
             image: 'image/img2.jpg',
             badge: 'Urban',
             badgeColor: 'var(--gray-500)',
             type: 'Apartment',
             whatsappMessage: 'Hi, I saw your hare For sale- Two 4BHK villas at Rajiv Nagar near Radio Station Monvila   Details'
-        }
+        },
+        {
+    id: 7,
+    title: 'Premium Villa with Pool',
+    location: 'Kazhakootam, Trivandrum',
+    price: '₹98',
+    beds: 5,
+    baths: 4,
+    area: '1,860 sq ft',
+    image: 'image/premium-villa.jpg',
+    badge: 'Luxury',
+    badgeColor: '#f59e0b',
+    type: 'Villa',
+    whatsappMessage: 'Hi, I saw your Premium Villa with Pool in Kazhakootam listed for ₹3.2 Cr. Can you share more details about the amenities and available units?'
+}
     ];
     
     const grid = document.getElementById('propertiesGrid');
