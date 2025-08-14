@@ -254,7 +254,7 @@ function loadProperties() {
     beds: 5,
     baths: 4,
     area: '1,860 sq ft',
-    image: 'image/premium-villa.jpg',
+    image: 'image//img2.jpg',
     badge: 'Luxury',
     badgeColor: '#f59e0b',
     type: 'Villa',
