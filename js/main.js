@@ -250,7 +250,7 @@ function loadProperties() {
     id: 7,
     title: 'Premium Villa with Pool',
     location: 'Kazhakootam, Trivandrum',
-    price: '₹98',
+    price: '₹98 Lk',
     beds: 5,
     baths: 4,
     area: '1,860 sq ft',
